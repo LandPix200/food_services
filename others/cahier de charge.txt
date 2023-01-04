@@ -1,0 +1,80 @@
+CAHIER DE CHARGE POUR APPLICATION MOBILE :
+e-vents (Agence évènementielle)
+Le document ci-présent représente le cahier de charge de la plateforme (application mobile) e-vents qui est une agence de service traiteur, et souhaite proposer à sa clientèle ses services à travers une plateforme qui nous facilitera le travail et la communication. 
+Elle reposera sur deux fonctions bien précises, qui sont : l’offre de service et la proposition de partenariat aux diverses entreprises qui exercent dans le même domaine que nous.
+    1. FONCTION DE L’APPLICATION
+L’application doit avoir pour but de faciliter la communication et la prise de contact avec nos potentiels clients pour ainsi être un facteur de croissance inégalable de nos activités et offrir une expérience client satisfaisante.
+    2. OBJECTIFS
+L’application a pour objectif d’augmenter nos ventes et de rendre la prise de contact avec notre entreprise agréable de par sa simplicité et sa présentation captivantes, pour donner une envie de toujours vouloir nous contacter en cas de besoin d’un service de même nature à ce que nous proposons.
+
+    A. PREMIERE FONCTIONALITÉ
+(OFFRE DE SERVICE)
+
+    • INSCRIPTION – CONNEXION : Pour  faciliter la communication avec nos utilisateur, il faudra qu’ils soient inscrit en remplissant un formulaire d’inscription comportant les éléments suivants (Nom, Prénom, N° de Téléphone Whatzapp, ville).
+Pour se connecter ils doivent simplement remplir les éléments suivants (Nom, N° de Téléphone)
+    • OPTIONS : elle doit avoir 04 option (Offre, Devenir partenaire, Nous contacter, Aide).
+    1. OFFRE :
+Cette page doit présenter de façon ordonnée tous nos offres et services avec des illustrations en images à l’appui. Les services sont les suivants : 
+    • Organisation logistique et gastronomique de tout évènement:
+    • Mariage ;
+    • Anniversaires ;
+    • Baptême ;
+    • Pâtisserie
+    • Restauration
+    • Séminaire ;
+    • Réunions ;
+    • Fêtes surprises ;
+    • Autres. 
+Pour chaque offre il faut  insérer des images illustratives de ce que nous proposons, donc, prévoir un espace pour du texte et une image pour chaque offre. 
+Les utilisateurs doivent avoir la possibilité de rédiger des offres personnalisés en fonction de leurs besoins et de leurs budgets, avec un formulaire comme suite : 
+NB : (ces formulaires ne sont qu’à titre illustratifs, juste pour me faire comprendre)
+EXEMPLE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    2. DEVENIR PARTENAIRE
+Dans cette page nous proposons aux entreprises légales qui offrent les même services que nous de devenir nos partenaires où qu’ils se trouvent, en travaillant en notre nom partout en Afrique, ce qui nous permettra de couvrir un très grand territoire.  
+
+« Souhaitez-vous devenir représentant de e-vents dans votre localité ? Inscrivez-vous ici !! »
+« Prenez en charge la satisfaction de notre clientèle de votre localité  en vous inscrivant en tant que partenaire légale de e-vents ». 
+EXEMPLE DE FORMULAIRE
+
+
+
+
+
+
+
+
+
+
+32
+
+
+ENVOYER
+
+Ceci n’est qu’un exemple pour illustrer au mieux les attentes.
+Les partenaires doivent avoir un tableau de bord où ils verront l’historique des recommandations que nous leurs avons faites et doivent recevoir en notification les nouvelles recommandations que nous leurs ferons. 
+Ils doivent pouvoir entrer en contact avec nous sur whatzapp depuis leur tableau de bord.
+    3. NOUS CONTACTER
+Cette page de contact doit renfermer tous les mayens possibles par lesquels les utilisateurs pourront entrer en contact direct avec notre service. (E-mail ; Facebook, whatzapp ; site internet ; YouTube ; les contacts de l’entreprise …) 
+Prévoir aussi un espace de messagerie pour permettre aux utilisateurs de nous envoyer des messages directement à travers l’application ou de contacter le service client.
+Sans oublier la localisation géographique de l’entreprise.
+32
+Cette page doit guider les utilisateurs sur la bonne utilisation de notre application, pour dire un guide d’utilisation particulier et chaleureux à suivre.
+NB : le bouton de partage de l’application doit être présent dans toutes les pages pour permettre à nos utilisateurs de recommander notre application à leurs proches. Le partage doit se faire essentiellement par facebook et whatzapp
