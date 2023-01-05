@@ -6,8 +6,6 @@ import 'package:food_services/pages/global.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'create_account.dart';
-
 class DiscoverPage extends StatefulWidget {
   const DiscoverPage({super.key});
 
@@ -24,24 +22,26 @@ class _DiscoverPageState extends State<DiscoverPage> {
   void initState() {
     pages = [
       IntroPage(
-        imageUrl:
-            "https://img.freepik.com/free-vector/catering-service-concept-illustration_114360-7668.jpg?w=740&t=st=1672572424~exp=1672573024~hmac=1d2d9feb4425b1497596d8a456118f569b4e91675c527789eb168a47410fbd65",
+        imageUrl: "p1.png",
         title: "E-VENTS",
         description: "Trouver des restorateurs pour vos évènements",
+      ),
+      IntroPage(
+        imageUrl: "handshake.png",
+        title: "DEVENEZ PARTENAIRE",
+        description: "Devenez partenaire avec nous et augmentez vos clients.",
       ),
 
       //
       IntroPage(
-        imageUrl:
-            "https://img.freepik.com/free-vector/restaurant-quality-certificate-cafe-food-checking-bistro-customer-satisfaction-employee-control-catering-service-chef-waiter-cartoon-character_335657-3280.jpg?w=740&t=st=1672572894~exp=1672573494~hmac=1911c3833174ef667d95d836a81e6e32723f57dfb5054ab1e5890ac61bc6d9d1",
+        imageUrl: "p2.png",
         title: "Faites-vous connaitre",
         description:
             "Enregistrez-vous dans l'appli entant que vendeur et obtenez des propositions et plus de clientèle",
       ),
       //
       IntroPage(
-        imageUrl:
-            "https://img.freepik.com/free-vector/foods-beverages-set_1308-105966.jpg?w=996&t=st=1672573449~exp=1672574049~hmac=2a1a1453c65b17e2d0b1ed2e8b5d32588f04a727c83619dff6849d12a570b52f",
+        imageUrl: "cam.png",
         title: "Une Grande variété",
         description:
             "Nos meilleurs chefs sont là et ils vous comprènent.\nResultat: des plats toujours très délicieux",
@@ -57,11 +57,15 @@ class _DiscoverPageState extends State<DiscoverPage> {
         color: Colors.white,
       ),
       child: GFIntroScreen(
+        color: Theme.of(context).primaryColor.withOpacity(0.05),
+        navigationBarColor: Theme.of(context).primaryColor.withOpacity(0.1),
         pageController: pageController,
         currentIndex: currentIndex,
         pageCount: pages.length,
         slides: pages,
         introScreenBottomNavigationBar: GFIntroScreenBottomNavigationBar(
+            activeColor: Theme.of(context).primaryColor,
+            inactiveColor: Theme.of(context).primaryColor.withOpacity(0.5),
             pageController: pageController,
             currentIndex: currentIndex,
             pageCount: pages.length,
@@ -125,7 +129,7 @@ class IntroButton extends StatelessWidget {
     return GFButton(
       onPressed: null,
       text: text,
-      color: color == null ? Colors.blue.shade900 : color!,
+      color: color == null ? Colors.red.shade900 : color!,
       shape: GFButtonShape.pills,
       textStyle: GoogleFonts.aBeeZee(
         fontWeight: FontWeight.w300,
@@ -161,8 +165,8 @@ class IntroPage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(25),
-            child: Image.network(
-              imageUrl,
+            child: Image.asset(
+              "assets/images/$imageUrl",
               scale: 0.7,
               filterQuality: FilterQuality.medium,
             ),
