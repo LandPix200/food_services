@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:food_services/logic/send.dart';
 import 'package:food_services/pages/contact.dart';
 import 'package:food_services/pages/no_partenaire.dart';
 import 'package:food_services/pages/offres.dart';
@@ -45,7 +46,9 @@ class _GlobalPageState extends State<GlobalPage> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () async {
+              await launchWhatsAppUri();
+            },
             icon: Icon(
               Icons.share,
             ),

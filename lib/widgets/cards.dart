@@ -28,7 +28,10 @@ class OffreCard extends StatelessWidget {
       ]),
       height: 300,
       imageOverlay: Image.network(
+      
         offre.imageUrl,
+        cacheHeight: 150,
+        cacheWidth: 300,
         height: 150,
         fit: BoxFit.cover,
       ).image,

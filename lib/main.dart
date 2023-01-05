@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:food_services/pages/discover.dart';
+import 'package:food_services/pages/intro.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
