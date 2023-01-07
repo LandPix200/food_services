@@ -9,7 +9,7 @@ class InputCA extends StatelessWidget {
     this.controller,
     this.icon,
     this.type = GfFormFieldType.text,
-    this.obscure = false,
+    this.obscure = false, this.validator,
   }) : super(key: key);
 
   final String hint;
@@ -17,6 +17,8 @@ class InputCA extends StatelessWidget {
   final IconData? icon;
   final bool obscure;
   final GfFormFieldType type;
+
+  final String? Function(String?)? validator;
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +31,7 @@ class InputCA extends StatelessWidget {
       iconPrefix: Icon(icon),
       gfFormFieldType: type,
       obscureText: obscure,
+      validator: validator,
     );
   }
 }

@@ -13,6 +13,19 @@ class DevenirPtnDialog extends StatefulWidget {
 }
 
 class _DevenirPtnDialogState extends State<DevenirPtnDialog> {
+  TextEditingController entreprise = TextEditingController();
+  TextEditingController pays = TextEditingController();
+  TextEditingController ville = TextEditingController();
+  TextEditingController registre = TextEditingController();
+  TextEditingController specialites = TextEditingController();
+  TextEditingController adresse = TextEditingController();
+  TextEditingController email = TextEditingController();
+  TextEditingController phone = TextEditingController();
+  TextEditingController mdp = TextEditingController();
+  TextEditingController cmdp = TextEditingController();
+
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -27,6 +40,8 @@ class _DevenirPtnDialogState extends State<DevenirPtnDialog> {
           ),
         ),
         content: Form(
+          key: formKey,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           child: Column(
             children: [
               InputCA(
@@ -35,7 +50,7 @@ class _DevenirPtnDialogState extends State<DevenirPtnDialog> {
               InputCA(
                 hint: "Votre pays",
                 icon: Icons.location_city,
-                type: GfFormFieldType.country,
+                type: GfFormFieldType.text,
               ),
               InputCA(
                 hint: "Votre ville",
@@ -76,7 +91,13 @@ class _DevenirPtnDialogState extends State<DevenirPtnDialog> {
                 GFButton(
                   fullWidthButton: true,
                   onPressed: () {
-                    Navigator.of(context).pop(true);
+                    final isValid = formKey.currentState!.validate();
+                    if (isValid) {
+                      Navigator.of(context).pop(true);
+                    } else {}
+
+                    // ignore: todo
+                    // TODO: Implementer un pop(User) afin de le prendre et de
                   },
                   text: "JE DEVIENS PARTENAIRE",
                 ),

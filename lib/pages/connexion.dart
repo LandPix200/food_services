@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, todo
 
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
@@ -13,6 +13,10 @@ class ConnexionPage extends StatefulWidget {
 }
 
 class _ConnexionPageState extends State<ConnexionPage> {
+  TextEditingController nom = TextEditingController();
+  TextEditingController phone = TextEditingController();
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +25,9 @@ class _ConnexionPageState extends State<ConnexionPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(
+                height: 20,
+              ),
               Text(
                 "Hey, te revoilà. Tu dois de connecter avant d'entrer.",
                 textAlign: TextAlign.center,
@@ -28,8 +35,8 @@ class _ConnexionPageState extends State<ConnexionPage> {
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 20, top: 40),
-                child: Image.network(
-                  "https://cdn-icons-png.flaticon.com/512/1057/1057240.png?w=740&t=st=1672576099~exp=1672576699~hmac=66ec3b67617d43121f08a6ff98abf2049f87ae1972b8cd02408760d1c47fc96f",
+                child: Image.asset(
+                  "assets/images/insc.png",
                   scale: 0.1,
                   width: 125,
                   filterQuality: FilterQuality.medium,
@@ -37,34 +44,48 @@ class _ConnexionPageState extends State<ConnexionPage> {
               ),
               Padding(
                 padding: const EdgeInsets.all(20),
-                child: Column(
-                  children: [
-                    InputCA(
-                      hint: "Nom",
-                      icon: Icons.person,
-                      type: GfFormFieldType.name,
-                    ),
-                    InputCA(
-                      hint: "Numéro de téléphone Whatsapp",
-                      icon: Icons.whatsapp,
-                      type: GfFormFieldType.phone,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8, right: 8, top: 30),
-                      child: GFButton(
-                        onPressed: () {},
-                        text: "Je me connecte",
-                        size: 50,
-                        fullWidthButton: true,
-                        textStyle: TextStyle(
-                          fontSize: 16,
+                child: Form(
+                  key: formKey,
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  child: Column(
+                    children: [
+                      InputCA(
+                        controller: nom,
+                        hint: "Nom",
+                        icon: Icons.person,
+                        type: GfFormFieldType.name,
+                      ),
+                      InputCA(
+                        controller: phone,
+                        hint: "Numéro de téléphone Whatsapp",
+                        icon: Icons.whatsapp,
+                        type: GfFormFieldType.phone,
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(left: 8, right: 8, top: 30),
+                        child: GFButton(
+                          onPressed: () {
+                            final validateForm =
+                                formKey.currentState!.validate();
+
+                            if (validateForm) {
+                              // TODO: Faire la fonction de connexion de l'utilisateur
+                            }
+                          },
+                          text: "Je me connecte",
+                          size: 50,
+                          fullWidthButton: true,
+                          textStyle: TextStyle(
+                            fontSize: 16,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-      
+
               //
             ],
           ),

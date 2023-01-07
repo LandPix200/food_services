@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:food_services/pages/create_account.dart';
+import 'package:food_services/pages/global.dart';
 import 'package:food_services/pages/intro.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -52,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: DiscoverPage(),
+      body: GlobalPage(),
     );
   }
 }

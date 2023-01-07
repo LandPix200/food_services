@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_services/logic/send.dart';
 import 'package:food_services/pages/contact.dart';
+import 'package:food_services/pages/dashboard.dart';
 import 'package:food_services/pages/no_partenaire.dart';
 import 'package:food_services/pages/offres.dart';
 
@@ -17,7 +18,7 @@ class GlobalPage extends StatefulWidget {
 
 class _GlobalPageState extends State<GlobalPage> {
   int currentItem = 0;
-  String currentTitle = "Offres";
+  String currentTitle = "Tableau de bord";
   late Widget curPage;
 
   List<Widget> pages = [
@@ -29,7 +30,7 @@ class _GlobalPageState extends State<GlobalPage> {
 
   @override
   void initState() {
-    curPage = pages[0];
+    curPage = DashBoard();
     super.initState();
   }
 
@@ -38,6 +39,19 @@ class _GlobalPageState extends State<GlobalPage> {
     return Scaffold(
       backgroundColor: Colors.orange.shade50,
       appBar: AppBar(
+        leading: IconButton(
+          tooltip: "Tableau de bord",
+          onPressed: () {
+            setState(() {
+              currentTitle = "Tableau de bord";
+              curPage = DashBoard();
+            });
+          },
+          icon: Icon(
+            Icons.space_dashboard_rounded,
+            color: Theme.of(context).primaryColor.withGreen(50),
+          ),
+        ),
         title: Text(
           currentTitle,
           style: Theme.of(context).textTheme.headline1!.copyWith(
@@ -46,6 +60,7 @@ class _GlobalPageState extends State<GlobalPage> {
         ),
         actions: [
           IconButton(
+            tooltip: "Partager l'application",
             onPressed: () async {
               await launchWhatsAppUri();
             },
